@@ -1,11 +1,17 @@
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
-metadata: 
-    name: roboshop-dev
-    region: eu-central-1
+metadata:
+  name: roboshop-dev          # Cluster name
+  region: eu-central-1        # AWS region (Frankfurt)
+
 managedNodeGroups:
   - name: managed-ng-public
-    instanceType: ["t3.small", "t3.medium"]
+    instanceTypes: ["t3.small", "t3.medium"]  # note: use 'instanceTypes' (plural)
     desiredCapacity: 2
+    minSize: 1
+    maxSize: 3
     spot: true
+    ssh:
+      allow: true
+      publicKeyName: my-key   # replace with your EC2 key pair name
