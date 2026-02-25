@@ -1,0 +1,11 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata: 
+    name: roboshop-dev
+    region: eu-central-1
+managedNodeGroups:
+  - name: managed-ng-public
+    instanceType: ["t3.small", "t3.medium"]
+    desiredCapacity: 2
+    spot: true
