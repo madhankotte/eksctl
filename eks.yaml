@@ -12,4 +12,3 @@ managedNodeGroups:
     minSize: 1
     maxSize: 3
     spot: true
-    
