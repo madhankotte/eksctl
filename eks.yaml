@@ -11,4 +11,4 @@ managedNodeGroups:
     desiredCapacity: 2
     minSize: 1
     maxSize: 3
-    spot: true
+    spot: true 
