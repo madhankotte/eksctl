@@ -3,7 +3,7 @@ kind: ClusterConfig
 
 metadata:
   name: roboshop-dev
-  region: eu-central-1
+  region: us-east-1
 
 managedNodeGroups:
   - name: managed-ng-public
